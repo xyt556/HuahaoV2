@@ -79,7 +79,7 @@ conda env export > env_filename.yaml
 （3）导出当前conda环境通过pip安装的包：
 
 pip freeze > requirements.txt
-
+pip install -r requirements.txt
 因为conda环境中有的包实际上是通过pip安装的，这种包是无法通过(1)中的方法导出的。
 复现环境
 
