@@ -95,7 +95,7 @@ sw = root.winfo_screenwidth()
 sh = root.winfo_screenheight()
 #得到屏幕高度
 ww = 500
-wh = 200
+wh = 150
 #窗口宽高为100
 x = (sw-ww) / 2
 y = (sh-wh) / 2
