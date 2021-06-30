@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="ICON">
+    <file>Earth.ico</file>
+  </qresource>
+</RCC>

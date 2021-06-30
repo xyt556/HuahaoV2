@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>灰度图像二值化</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Earth.ico</normaloff>Earth.ico</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>请选择指数影像：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="Input_Edit">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Open_Button">
+       <property name="text">
+        <string>…</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>保存二值化图像：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="Output_Edit"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Save_Button">
+       <property name="text">
+        <string>…</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>阈值：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="Bin_Edit"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Cal_Button">
+       <property name="text">
+        <string>二值化</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Cust_Button">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>自定义二值化</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>说明：</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;本模块根据计算的遥感指数，利用OTSU算法对遥感指数图像进行二值化，以进一步提取相关信息。&lt;/p&gt;&lt;p&gt;1、选择遥感指数图像（TIF格式）；&lt;/p&gt;&lt;p&gt;2、保存二值化图像（TIF格式）；&lt;/p&gt;&lt;p&gt;3、二值化，根据OTSU算法，获取阈值并进行二值化；&lt;/p&gt;&lt;p&gt;4、如修改阈值进行二值化，可以修改阈值文本框中的值，点击“自定义二值化”按钮进行二值化处理，原二值化图像文件名后自动添加_Cust。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Open_Button</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>Open_img()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>329</x>
+     <y>28</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>39</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Save_Button</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>Save_img()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>310</x>
+     <y>61</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>370</x>
+     <y>99</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Cal_Button</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>Binarization()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>270</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>231</x>
+     <y>138</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Cust_Button</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>Cust_Binarization()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>197</x>
+     <y>116</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>355</x>
+     <y>187</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>Cust_Binarization()</slot>
+ </slots>
+</ui>

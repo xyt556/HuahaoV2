@@ -1,0 +1,98 @@
+pyinstaller -D -i Earth.ico OTSU_T.py --hidden-import skimage.feature._orb_descriptor_positions
+——————————————————————————————————————————————————————————————
+特别说明：
+编译环境选D盘下的D:\Python38下的环境
+启动DOS或在下面的Terminal运行
+进入要编译的源程序目录
+path D:\Python38\Scripts
+运行：pyinstaller。。。。。
+
+——————————————————————————————————————————————————————————————————————
+pyuic5 -o PyQT_Form.py PyQT_Form.ui
+pyuic5 -o ClipTif_Form.py ClipTif_Form.ui
+pyuic5 -o Index_Form_GF.py Index_Form_GF.ui
+pyuic5 - o 目标文件名.py 源文件名.ui
+
+设置扩展工具：pyuic5
+$FileName$ -o $FileNameWithoutExtensions$.py
+--hidden-import
+C:\ProgramData\Anaconda3\Scripts\pyinstaller.exe
+pyinstaller -Dw -i Earth.ico RF.py --hidden-import sklearn.neighbors.typedefs --hidden-import sklearn.utils._cython_blas --hidden-import sklearn.neighbors._quad_tree --hidden-import sklearn.tree._utils
+pyinstaller -D -i Earth.ico RF.py --hidden-import sklearn.neighbors.typedefs --hidden-import sklearn.utils._cython_blas --hidden-import sklearn.neighbors._quad_tree --hidden-import sklearn.tree._utils
+
+driver = gdal.GetDriverByName('GTiff')
+D:\HuahaoV2\RF.py
+import os
+os.environ['PROJ_LIB'] = r'C:\ProgramData\Anaconda3\Lib\site-packages\osgeo\data\proj'
+C:\ProgramData\Anaconda3\Lib\site-packages\osgeo\data\proj\proj.db
+
+out_path = tk.filedialog.asksaveasfilename(title="保存裁剪影像文件", defaultextension=".tif",
+                                                filetypes=[("TIF", "TIF"), ("TIFF", "TIFF"), ("DAT", "dat"),
+                                                           ("IMG", "img"), ("所有文件", ".*")])
+
+缺少库，修改*.spec文件，hidden-import
+pyinstaller RF.spec
+pyinstaller -F -c QTimerTest.py --hidden-import sklearn.neighbors.typedefs
+pyinstaller -F -c RF.py --hidden-import sklearn.neighbors.typedefs
+可选参数 	格式举例 	功能说明
+-F 	pyinstaller -F demo.py 	只在dist中生产一个demo.exe文件。
+-D 	pyinstaller -D demo.py 	默认选项，除了demo.exe外，还会在在dist中生成很多依赖文件，推荐使用。
+-c 	pyinstaller -c demo.py 	默认选项，只对windows有效，使用控制台，就像编译运行C程序后的黑色弹窗。
+-w 	pyinstaller -w demo.py 	只对windows有效，不使用控制台。
+-p 	pyinstaller -p E:\python\Lib\site-packages demo.py 	设置导入路径，一般用不到。
+-i 	pyinstaller -i D:\file.icon demo.py 	将file.icon设置为exe文件的图标，推荐一个icon网站:icon
+
+d
+
+pyinstaller -D -w OTSU_Bin.py
+D:\微云同步助手\44140325\MyPython\resource\Earth.ico
+打包出错：试着输入下面的命令
+chcp 65001
+运行出错：
+需要拷贝Python安装的包目录下的dask目录下的config.py文件、dask.yaml文件
+在打包的可执行程序的目录中建立目录dask，将上述两个文件拷贝至此目录下，一般可以解决问题。
+
+pip install image==1.5.32
+
+wxPython
+pip install -U wxPython
+
+——————————————————————————————————————————————————————————————————————————————
+
+conda环境移植
+拷贝环境
+
+(1)进入要拷贝的conda环境：
+
+conda activate [env_name]
+
+或者
+
+source activate [env_name]
+
+（2）导出当前conda环境到某个文件：
+
+conda env export > env_filename.yaml
+
+当前环境将被保存在env_filename.yaml文件中
+
+（3）导出当前conda环境通过pip安装的包：
+
+pip freeze > requirements.txt
+
+因为conda环境中有的包实际上是通过pip安装的，这种包是无法通过(1)中的方法导出的。
+复现环境
+
+(1)复现conda环境
+
+conda env create -f env_filename.yaml
+
+(2)复现conda环境中pip安装的包：
+
+pip install -r requirements.txt
+
+pyuic5 -o ClipTif_Form.py ClipTif_Form.ui
+pyuic5 -o Index_Form_L8.py Index_Form_L8.ui
+pyuic5 -o Index_Form_GF.py Index_Form_GF.ui
+pyuic5 -o OTSU_Form.py OTSU_Form.ui
+pyuic5 -o RF_Form.py RF_Form.ui
